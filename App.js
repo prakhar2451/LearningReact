@@ -1,3 +1,6 @@
+        import React from "react";
+        import  ReactDOM  from "react-dom/client";
+        
         /**
          * <div id="parent">
          *     <div id="child">
@@ -31,10 +34,4 @@
         
         // const heading = React.createElement("h1", {}, "Hello, world! from react.");
         const root = ReactDOM.createRoot(document.getElementById("root")); //  ye bolega ki kiske andar render hona hai(kisko root node banaye?), uska id dedo
-        // root.render(heading);
         root.render(parent);
-
-
-        const paragraph = React.createElement("p", {}, "this is a paragraph element created using react");
-        const para = ReactDOM.createRoot(document.getElementById("para")); // ye bolega ki kiske andar render hona hai(kisko root node banaye?), uska id dedo
-        para.render(paragraph);
