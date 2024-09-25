@@ -1,28 +1,25 @@
-import React from "react";
-import  ReactDOM  from "react-dom/client";
+import react from "react";
+import reactDom from "react-dom/client";
+
+import Header from "./src/components/Header";
+import Body from "./src/components/Body";
 
 
 
-// functional component
-const ParagraphComponent = ()=> (
-    <p id="paragraph">
-        This is a paragraph component!!
-    </p>
-);
 
-const elem = <p>this is paragraph element</p>
 
-const HeadingComponent= () => (
-    <div>
-        <h1 id="header"className="heading">
-            This is a heading component!!
-        </h1>
-        <ParagraphComponent /> // we can write like this.
-        <ParagraphComponent></ParagraphComponent> // we can write like this as well.
-        {elem} // we can put any JS code inside the JSX.
-    </div>
 
-);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<HeadingComponent />);
+const AppLayout=()=>{
+    return (
+        <div>
+            <Header />
+            <Body />
+        </div>
+    )
+}
+
+
+const root = reactDom.createRoot(document.getElementById("root"));
+
+root.render(<AppLayout />);
